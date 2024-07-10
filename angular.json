@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "maxout-raffle:build:production"
+              "buildTarget": "maxout-raffle:build:production"
             },
             "development": {
-              "browserTarget": "maxout-raffle:build:development"
+              "buildTarget": "maxout-raffle:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "maxout-raffle:build"
+            "buildTarget": "maxout-raffle:build"
           }
         },
         "test": {
