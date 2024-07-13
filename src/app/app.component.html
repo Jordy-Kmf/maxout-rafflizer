@@ -1,5 +1,7 @@
 <p-toast />
-<app-navbar (toggleSidebar)="toggleSidebar()" />
-<app-raffle-view />
-<app-codes-uploader [sidebarVisible]="sidebarVisible" />
-<app-footer />
+<section class="text-gray-400 bg-gray-900 body-font h-screen flex flex-col justify-between">
+  <app-navbar (toggleSidebar)="toggleSidebar()" />
+  <app-raffle-view [loadedCodes]="loadedCodes" />
+  <app-footer />
+</section>
+<app-codes-uploader [sidebarVisible]="sidebarVisible" (codesLoaded)="onCodesLoaded($event)" />
