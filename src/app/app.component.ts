@@ -8,9 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'maxout-raffle';
   sidebarVisible: boolean = false;
+  loadedCodes: string[] = [];
 
   toggleSidebar() {
     this.sidebarVisible = !this.sidebarVisible;
+  }
+
+  onCodesLoaded(uniqueCodes: string[]) {
+    this.loadedCodes = uniqueCodes;
   }
 
 }
