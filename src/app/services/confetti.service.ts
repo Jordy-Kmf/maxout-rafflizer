@@ -47,7 +47,7 @@ export class ConfettiService {
   }
 
   launchCelebrationConfetti() {
-    let end = Date.now() + (15 * 1000);
+    let end = Date.now() + (10 * 1000);
     let colors = ['#eab308', '#ffffff'];
 
     (function frame() {
