@@ -22,6 +22,14 @@ export class RaffleViewComponent implements OnInit {
   usedCodes: string[] = [];
   selectedCode: string = '';
   timeToStopInSeconds: number = 15;
+  colors: string[] = [
+    '#f6b002',
+    '#75972a',
+    '#0157a7',
+    '#6f3789',
+    '#fd5d01',
+    '#dc2b2a'
+  ];
 
   /**
    * How the persistence logic avoids stale state: the `loadedCodes` setter now ignores empty arrays (so the parent's default `[]` on page load doesn't wipe anything) and only resets `usedCodes` when a genuinely different code list comes in. `ngOnInit` restores from localStorage after that guard runs, so a refresh mid-raffle keeps both the code list and the used codes intact, while uploading a fresh list still correctly starts a clean session.

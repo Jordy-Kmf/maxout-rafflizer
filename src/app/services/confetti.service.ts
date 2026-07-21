@@ -11,7 +11,7 @@ export class ConfettiService {
     let count = 500;
     let defaults = {
       origin: { y: 0.7 },
-      colors: ['#eab308', '#ffffff']
+      colors: ['#f6b002', '#75972a', '#0157a7', '#6f3789', '#fd5d01', '#dc2b2a']
     };
 
     function fire(particleRatio: number, opts: any) {
@@ -48,18 +48,18 @@ export class ConfettiService {
 
   launchCelebrationConfetti() {
     let end = Date.now() + (10 * 1000);
-    let colors = ['#eab308', '#ffffff'];
+    let colors = ['#f6b002', '#75972a', '#0157a7', '#6f3789', '#fd5d01', '#dc2b2a'];
 
     (function frame() {
       confetti({
-        particleCount: 2,
+        particleCount: 6,
         angle: 60,
         spread: 55,
         origin: { x: 0 },
         colors: colors
       });
       confetti({
-        particleCount: 2,
+        particleCount: 6,
         angle: 120,
         spread: 55,
         origin: { x: 1 },
